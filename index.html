@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p>Please wait, returning to Conduit Pro...</p>
+    <script>
+        var hash = window.location.hash;
+        
+        var appScheme = "conduitpro://callback";
+        
+        if (hash) {
+            window.location.href = appScheme + hash;
+        } else {
+            document.body.innerHTML = "No token found. Please try logging in again.";
+        }
+    </script>
+</body>
+</html>
